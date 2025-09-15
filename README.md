@@ -7,10 +7,9 @@
 - [Data Sources](#data-sources)
 - [Tools](#tools)
 - [Techniques Used](#techniques-used)
+- [Preliminary Phase](#preliminary-phase)
 - [Analysis Results ](#analysis-results)
 - [Links and Sources](#links-and-sources)
-
-![fitness_app](https://github.com/GabryGit/Python_Project-Fitness-application-EMS/blob/main/Sources/app-fitness.jpg)
 
 
 ### Project Overview
@@ -19,30 +18,39 @@ This project focuses on building a supervised machine learning model to predict 
 
 To solve this classification problem, a Decision Tree Classifier was chosen. This model is well-suited for the task as it works by creating a series of rules from the data, which makes the decision-making process transparent and easy to interpret. This allows us to not only predict outcomes but also to understand which factors most influenced a passenger's chance of survival.
 
+![titanic.jpg](https://github.com/GabryGit/Machine_Learning_Project-Titanic-Survival-Prediction/blob/main/resources/titanic.jpg)
 
 ### Data Sources
 
 The analysis uses a dataset containing key passenger information, including Age, Sex, Social Class, and Port of Embarkation. 
+
 [Dataset](https://github.com/GabryGit/Machine_Learning_Project-Titanic-Survival-Prediction/blob/main/titanic_sub-dataset.csv)
 
 
 ### Tools
 
-- Python
+- Python Libraries:
+  - Pandas: Data Analysis
+  - Matplotlib: Data Visualisation
+  - Scikit-Learn: Machine Learning
 
 
 ### Techniques Used
 
-- Lists
-- Dictionaries
-- Functions
-- For loop
-- While loop
+- ColumnTransfomer (Data Preparation)
+- Pipeline
+- K-fold Cross Validation
+- ML Model: Decision Tree Classifier
+- Model evaluation: Confusion Matrix - Classification Report
+
   
+### Preliminary Phase 
 
-![while loop](https://github.com/GabryGit/Python_Project-Fitness-application-EMS/blob/main/Sources/while-true-cycle.jpeg)
-
-
+1. During the exploratory data analysis (EDA) phase, the main focus was to evaluate how each feature in the dataset correlates with the target variable, passenger survival. Below some of the charts plotted during the analysis
+   ![age_ditribution](https://github.com/GabryGit/Machine_Learning_Project-Titanic-Survival-Prediction/blob/main/resources/age_distribution.png)
+   ![survivors1](https://github.com/GabryGit/Machine_Learning_Project-Titanic-Survival-Prediction/blob/main/resources/survivors_percentage.png)
+   ![survivors2](https://github.com/GabryGit/Machine_Learning_Project-Titanic-Survival-Prediction/blob/main/resources/survivors_percentage-2.png)
+   ![survivors3](https://github.com/GabryGit/Machine_Learning_Project-Titanic-Survival-Prediction/blob/main/resources/survivors_percentage-3.png)
 
 ### Analysis Results 
 
