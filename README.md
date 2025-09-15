@@ -65,7 +65,7 @@ The analysis uses a dataset containing key passenger information, including Age,
 2. Feature engineering: this phase involved creating the new features 'Women_1st_class' and 'Man_3d_class'. As identified during the exploratory data analysis, these represent the two extremes in terms of survival probability based on the combination of 'Sex' and 'Pclass' (passenger class).
                         The inclusion of these new columns was expected to simplify the prediction task for the model and improve its overall performance.
 
-3. Data Preparation: *ColumnTransformer* was used to automate and streamline the preprocessing of different feature types. The key preprocessing steps were:
+3. Data Preparation: **ColumnTransformer** was used to automate and streamline the preprocessing of different feature types. The key preprocessing steps were:
 
       - Handling Missing Values:
         
@@ -78,7 +78,7 @@ The analysis uses a dataset containing key passenger information, including Age,
 
 ### Model Validation and Fitting
 
-To ensure the model's optimal performance, we used GridSearchCV for hyperparameter tuning. This technique systematically works through multiple combinations of parameter values, cross-validating the model to determine the best-performing set of hyperparameters.
+To ensure the model's optimal performance, we used **GridSearchCV** for hyperparameter tuning. This technique systematically works through multiple combinations of parameter values, cross-validating the model to determine the best-performing set of hyperparameters.
 We chose GridSearchCV for a few key reasons:
 
 - Limited Search Space: We only needed to tune one hyperparameter: max_depth.
@@ -93,7 +93,7 @@ After finding the optimal max_depth value, the Decision Tree Classifier was fitt
 
 ### Model Evaluation
 
-During the Data Exploration phase, we observed that the classes in our target variable (survived vs. not survived) were slightly imbalanced, with a 40/60 split.
+During the Data Exploration phase, we observed that the classes in our target variable (survived vs. not survived) were slightly **imbalanced**, with a 40/60 split.
 Given this imbalance, accuracy alone is not a reliable metric for evaluating the model's true performance. Therefore, we need to use additional metrics to get a more complete picture of the supervised model's effectiveness.
 
 - Confusion Matrix Analysis
@@ -112,17 +112,17 @@ The model's predictions resulted in the following:
 
 ### Conclusions and Future Improvements
 
-Overall, the model demonstrates solid performance, with a total accuracy of 80% and similarly high macro/weighted averages for other key metrics. This indicates that it generally makes reliable predictions.
+Overall, the model demonstrates solid performance, with a total **accuracy of 80%** and similarly **high macro/weighted averages for other key metrics**. This indicates that it generally makes **reliable predictions**.
 
-However, a deeper analysis reveals a significant weakness: the model is much better at predicting "Not Survived" passengers than "Survived" ones. This is clearly shown by the F1 score, which is 85% for the majority class and only 71% for the minority class. This discrepancy is also visible in the confusion matrix, which shows a high number of False Negatives (29) for a total of only 84 positive instances.
+However, a deeper analysis reveals a significant weakness: **the model is much better at predicting "Not Survived" passengers than "Survived" ones**. This is clearly shown by the F1 score, which is 85% for the majority class and only 71% for the minority class. This discrepancy is also visible in the confusion matrix, which shows a high number of False Negatives (29) for a total of only 84 positive instances.
 
 As identified during the Data Exploration phase, the dataset was imbalanced, with fewer passengers in the "Survived" class. This imbalance explains the model's difficulty in correctly predicting the minority class and highlights why accuracy alone can be a misleading metric for evaluating the model's true performance.
 
 To improve the model's performance and address this bias, the following steps are recommended:
 
-- Balance the Dataset: The most critical next step is to balance the dataset. Oversampling the "Survived" class is a good option to avoid losing valuable information and patterns, which could happen with undersampling.
-- Tune More Hyperparameters: Expanding the tuning process to include other hyperparameters of the Decision Tree model, beyond just max_depth, could lead to a more robust model.
-- Explore Other Models: Consider using a more powerful supervised machine learning algorithm, such as a Random Forest or a Gradient Boosting model, as they often offer superior performance for this type of classification problem.
+- *Balance the Dataset*: The most critical next step is to balance the dataset. Oversampling the "Survived" class is a good option to avoid losing valuable information and patterns, which could happen with undersampling.
+- *Tune More Hyperparameters*: Expanding the tuning process to include other hyperparameters of the Decision Tree model, beyond just max_depth, could lead to a more robust model.
+- *Explore Other Models*: Consider using a more powerful supervised machine learning algorithm, such as a Random Forest or a Gradient Boosting model, as they often offer superior performance for this type of classification problem.
 
 ### Links and Sources
 [Python script](https://github.com/GabryGit/Python_Project-Fitness-application-EMS/blob/main/Python_Project-Fitness-app-EMS.ipynb)
