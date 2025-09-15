@@ -39,7 +39,7 @@ The analysis uses a dataset containing key passenger information, including Age,
 
 ### Techniques Used
 
-- ColumnTransfomer (Data Preparation)
+- ColumnTransfomer
 - Pipeline
 - K-fold Cross Validation
 - ML Model: Decision Tree Classifier
