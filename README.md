@@ -48,7 +48,7 @@ The analysis uses a dataset containing key passenger information, including Age,
   
 ### Preliminary Phase 
 
-1. Exploratory data analysis (EDA): the main focus was to evaluate how each feature in the dataset correlates with the target variable, passenger survival. Below some of the charts plotted during the analysis.
+1. **Exploratory data analysis (EDA)**: the main focus was to evaluate how each feature in the dataset correlates with the target variable, passenger survival. Below some of the charts plotted during the analysis.
    
    ![age_ditribution](https://github.com/GabryGit/Machine_Learning_Project-Titanic-Survival-Prediction/blob/main/resources/age_distribution.png)
    ![survivors1](https://github.com/GabryGit/Machine_Learning_Project-Titanic-Survival-Prediction/blob/main/resources/survivors_percentage.png)
@@ -62,10 +62,10 @@ The analysis uses a dataset containing key passenger information, including Age,
     - Social Class: Passengers in higher social classes had a greater chance of survival.
 
 
-2. Feature engineering: this phase involved creating the new features 'Women_1st_class' and 'Man_3d_class'. As identified during the exploratory data analysis, these represent the two extremes in terms of survival probability based on the combination of 'Sex' and 'Pclass' (passenger class).
+2. **Feature engineering**: this phase involved creating the new features 'Women_1st_class' and 'Man_3d_class'. As identified during the exploratory data analysis, these represent the two extremes in terms of survival probability based on the combination of 'Sex' and 'Pclass' (passenger class).
                         The inclusion of these new columns was expected to simplify the prediction task for the model and improve its overall performance.
 
-3. Data Preparation: **ColumnTransformer** was used to automate and streamline the preprocessing of different feature types. The key preprocessing steps were:
+3. **Data Preparation**: **ColumnTransformer** was used to automate and streamline the preprocessing of different feature types. The key preprocessing steps were:
 
       - Handling Missing Values:
         
@@ -125,6 +125,6 @@ To improve the model's performance and address this bias, the following steps ar
 - *Explore Other Models*: Consider using a more powerful supervised machine learning algorithm, such as a Random Forest or a Gradient Boosting model, as they often offer superior performance for this type of classification problem.
 
 ### Links and Sources
-[Python script](https://github.com/GabryGit/Python_Project-Fitness-application-EMS/blob/main/Python_Project-Fitness-app-EMS.ipynb)
+[[Notebook]](https://github.com/GabryGit/Machine_Learning_Project-Titanic-Survival-Prediction/blob/main/ML_Project-Titanic-Survival-Prediction.ipynb)
 
 [[Data Analytics Master-Start2Impact University]](https://www.start2impact.it/master/data-science-analytics/)
